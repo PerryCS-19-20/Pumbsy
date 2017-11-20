@@ -19,31 +19,36 @@
     
     <!-- Below is the code that will run -->
     <div>
-      <div class="title"> <!-- title bar for the javascript code -->
+       <!-- title bar for the javascript code -->
         <button onclick="start();">Run</button> <!-- Run button that calls start function when pressed -->
         Hello World <!-- Program title -->
-      </div>
-
-<script class="code">
-
-    var firstName = readLine("Whats your first name?");
-    var lastName = readLine("Whats your last name?");
-    var middleInitial = readLine("Whats is your middle initial?");
-    var age = readLine("Whats your age?");
-    var year = readLine("What school year are you in?");
-    var walk = readLine("Do you walk to school?");
-    var homework = readLine("How many hours do they plan to do homework tonight?");
-    var plans = readLine("Do you have plans for the weekend?");
-    var whatPlans = readLine("What are their plans for the weekend?");
-    var college = readLine("Do you want to go to college?");
-    var pubg = readLine("Do you like pubg?");
-    var csgo = readLine("Do you like csgo?");
-    
-
-</script>
-      <canvas id="Drawing"></canvas> <!-- Graphics output canvas -->
-      <textarea id="Console"></textarea> <!-- Text output console -->
     </div>
+
+    <script class="code">
+    function start() {
+        var firstName = readLine("Whats your first name?");
+        var lastName = readLine("Whats your last name?");
+        var middleInitial = readLine("Whats is your middle initial?");
+        var age = readLine("Whats your age?");
+        var year = readLine("What school year are you in?");
+        var walk = readBoolean("Do you walk to school?");
+        var homework = readLine("How many hours do they plan to do homework tonight?");
+        var plans = readBoolean("Do you have plans for the weekend?");
+        var whatPlans = readLine("What are their plans for the weekend?");
+        var college = readLine("Do you want to go to college?");
+        var pubg = readLine("Do you like pubg?");
+        var csgo = readLine("Do you like csgo?");
+        var fun = readLine("Do you like to have fun?");
+
+        println("Subject: "+ lastName + ", " + firstName + " " + middleInitial);
+        println("Age: "+ age);
+        println("Grade:" + year + ", walks to school: " + walk);
+        println(homework + "hour(s) of hw ");
+        println("Weekend: " + plans + ", " + whatPlans);
+    }
+    </script>
+    <canvas id="Drawing"></canvas> <!-- Graphics output canvas -->
+      <textarea id="Console"></textarea> <!-- Text output console -->
     
   </body>
 </html>
