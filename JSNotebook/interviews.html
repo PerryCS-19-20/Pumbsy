@@ -29,22 +29,31 @@
         var firstName = readLine("Whats your first name?");
         var lastName = readLine("Whats your last name?");
         var middleInitial = readLine("Whats is your middle initial?");
-        var age = readLine("Whats your age?");
+        var age = readLine("How old are you?");
         var year = readLine("What school year are you in?");
         var walk = readBoolean("Do you walk to school?");
-        var homework = readLine("How many hours do they plan to do homework tonight?");
+        var homework = readLine("How many hours do you plan to do homework tonight?");
         var plans = readBoolean("Do you have plans for the weekend?");
-        var whatPlans = readLine("What are their plans for the weekend?");
+        var whatPlans = readLine("What are your plans for the weekend?");
         var college = readLine("Do you want to go to college?");
-        var pubg = readLine("Do you like pubg?");
-        var csgo = readLine("Do you like csgo?");
-        var fun = readLine("Do you like to have fun?");
-
+        var career = readLine("What do you plan on becoming?")
+        var team = readLine("What is your favorite sports team?");
+        var pubg = readBoolean("Is pubg a good game?");
+        var csgo = readBoolean("Is csgo a good game?");
+        var fun = readBoolean("Do you like to have fun?");
+           
         println("Subject: "+ lastName + ", " + firstName + " " + middleInitial);
-        println("Age: "+ age);
-        println("Grade:" + year + ", walks to school: " + walk);
-        println(homework + "hour(s) of hw ");
+        println("Year born in: "+ (2017 - age));
+        println("Grade: " + year + ", walks to school: " + walk);
+        println("Plans: ");
+        println(homework + " hour(s) of hw ");
         println("Weekend: " + plans + ", " + whatPlans);
+        println("Plan to be: " + career);
+        println("College: " + college);
+        println("Favorite team: " + team);
+        println("Pubg is fun: " + pubg);
+        println("Csgo is fun: " + csgo);
+        println("Having fun: " + fun);
     }
     </script>
     <canvas id="Drawing"></canvas> <!-- Graphics output canvas -->
