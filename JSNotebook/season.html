@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>print and println</title>
+</head>
+
+<body onload="start();">
+    <script>
+        
+function start(){
+    canvas.prepare();
+    var rect1 = new Rect(0, 0, canvas.getWidth(), canvas.getHeight());
+      rect1.setColor("blue");
+      canvas.add(rect1);
+      
+      var circle1 = new Circle(canvas.getWidth() / 2, canvas.getHeight() - (canvas.getHeight()/6), canvas.getHeight()/6);
+      circle1.setColor("black");
+      canvas.add(circle1);
+      
+      var circle2 = new Circle(canvas.getWidth() / 2, canvas.getHeight() - (canvas.getHeight()/2.20), canvas.getHeight()/8);
+      circle2.setColor("black");
+      canvas.add(circle2);
+      
+      var circle3 = new Circle(canvas.getWidth() / 2, canvas.getHeight() - (canvas.getHeight()/1.5), canvas.getHeight()/10);
+      circle3.setColor("black");
+      canvas.add(circle3);
+      
+      var circle6 = new Circle(canvas.getWidth() / 2, canvas.getHeight() - (canvas.getHeight()/1.5), canvas.getHeight()/11);
+      circle6.setColor("brown");
+      canvas.add(circle6);
+      
+      var circle5 = new Circle(canvas.getWidth() / 2, canvas.getHeight() - (canvas.getHeight()/2.20), canvas.getHeight()/8.65);
+      circle5.setColor("brown");
+      canvas.add(circle5);
+      
+      var circle4 = new Circle(canvas.getWidth() / 2, canvas.getHeight() - (canvas.getHeight()/6), canvas.getHeight()/6.5);
+      circle4.setColor("brown");
+      canvas.add(circle4);
+      
+    canvas.draw();
+  }
+
+   
+    </script>
+    <pre id="Console" style="font-size: 12px;"></pre>
+    <canvas id="Drawing"></canvas>
+    <script src="https://perryma.tk/jsnotebook/notebook.js"></script>
+</body>
+
+</html>
