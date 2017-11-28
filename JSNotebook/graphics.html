@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>      
+    <link href="https://perryma.tk/jsnotebook/notebook.css" rel="stylesheet" type="text/css" />    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>My JavaScript Notebook</title>
+  </head>
+
+  <body>
+    <div class="header">
+        <!-- Title for this notebook page -->
+        <h1>My JavaScript Notebook: <em>Graphics Objects</em></h1>
+        <div class="menubar"></div>
+    </div>
+    
+    <!-- Describe what this notebook page is showing -->
+    <p><em>What I learned today...</em></p>
+    
+    <!-- Below is the code that will run -->
+    <div>
+      <div class="title"> <!-- title bar for the javascript code -->
+        <button onclick="start();">Run</button> <!-- Run button that calls start function when pressed -->
+        Hello World <!-- Program title -->
+      </div>
+
+<script class="code">
+
+  function start(){
+    canvas.prepare();
+    var rect1 = new Rect(0, 0, canvas.getWidth(), canvas.getHeight());
+      rect1.setColor("blue");
+      canvas.add(rect1);
+      
+      var circle1 = new Circle(canvas.getWidth() / 2, canvas.getHeight() - (canvas.getHeight()/6), canvas.getHeight()/6);
+      circle1.setColor("black");
+      canvas.add(circle1);
+      
+      var circle4 = new Circle(canvas.getWidth() / 2, canvas.getHeight() - (canvas.getHeight()/6), canvas.getHeight()/6.5);
+      circle4.setColor("white");
+      canvas.add(circle4);
+      
+      var circle2 = new Circle(canvas.getWidth() / 2, canvas.getHeight() - (canvas.getHeight()/2.20), canvas.getHeight()/8);
+      circle2.setColor("black");
+      canvas.add(circle2);
+      
+      var circle5 = new Circle(canvas.getWidth() / 2, canvas.getHeight() - (canvas.getHeight()/6), canvas.getHeight()/8.5);
+      circle5.setColor("white");
+      canvas.add(circle5);
+      
+      var circle3 = new Circle(canvas.getWidth() / 2, canvas.getHeight() - (canvas.getHeight()/1.5), canvas.getHeight()/10);
+      circle3.setColor("black");
+      canvas.add(circle3);
+      
+      var circle6 = new Circle(canvas.getWidth() / 2, canvas.getHeight() - (canvas.getHeight()/6), canvas.getHeight()/10.5);
+      circle6.setColor("white");
+      canvas.add(circle6);
+      
+    canvas.draw();
+  }
+
+   
+    </script>
+    <pre id="Console" style="font-size: 12px;"></pre>
+    <canvas id="Drawing"></canvas>
+    <script src="https://perryma.tk/jsnotebook/notebook.js"></script>
+</body>
+
+</html>
+
+</script>
+      <canvas id="Drawing"></canvas> <!-- Graphics output canvas -->
+      <textarea id="Console"></textarea> <!-- Text output console -->
+    </div>
+    <script src="https://perryma.tk/jsnotebook/notebook.js"></script>    
+  </body>
+</html>
