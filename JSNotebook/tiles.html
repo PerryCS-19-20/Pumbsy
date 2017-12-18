@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>      
+    <link href="https://perryma.tk/jsnotebook/notebook.css" rel="stylesheet" type="text/css" />    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>My JavaScript Notebook</title>
+  </head>
+
+  <body>
+    <div class="header">
+        <!-- Title for this notebook page -->
+        <h1>My JavaScript Notebook: <em>Graphics Objects</em></h1>
+        <div class="menubar"></div>
+    </div>
+    
+    <!-- Describe what this notebook page is showing -->
+    <p><em>For loops can be used for repetitive things. It is important to have clear/ easy to read code.</em></p>
+    
+    <!-- Below is the code that will run -->
+    <div>
+      <div class="title"> <!-- title bar for the javascript code -->
+        <button onclick="start();">Run</button> <!-- Run button that calls start function when pressed -->
+        tilingCircles <!-- Program title -->
+      </div>
+
+<script class="code">
+
+   function start(){
+    canvas.prepare();
+    var count = readInt("How many circles in the row?")
+    var d = canvas.getWidth() / count;
+    var r = d / 2;
+    var rows = canvas.getHeight() / d;
+    var rowChange = 0;
+    for (var q = 0; q < rows; q++){
+    for (var i = 0; i < count; i++){
+    var x = (i * d) + r;
+    var circle = new Circle(x, r + rowChange, r);
+    var red = Math.random() * 256;
+    var green = Math.random() * 256; 
+    var blue = Math.random() * 256;
+    circle.setColor(rgb(red, green, blue));
+    canvas.add(circle);
+    }
+    rowChange = d + rowChange;
+   }
+  canvas.draw();
+}
+
+</script>
+      <canvas id="Drawing"></canvas> <!-- Graphics output canvas -->
+      <textarea id="Console"></textarea> <!-- Text output console -->
+    </div>
+    <script src="https://perryma.tk/jsnotebook/notebook.js"></script>    
+  </body>
+</html>
