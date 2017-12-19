@@ -25,11 +25,45 @@
       </div>
 
 <script class="code">
-
-    function start(){
-        
-    }
-
+   function start(){
+         var miles = readInt("What is a distance in miles?");
+         var kilometers = miles * 1.60934;
+         var meters = kilometers * 1000;
+         var feet = meters * 3.28084;
+         var inches = feet * 12;
+         var millimeters = inches * 25.4;
+         println("Distance in miles: " + miles);
+         print("Distance in kilometers: ");
+         println(milesToKilometers(miles));
+         print("Distance in meters: ");
+         println(kilometersToMeters(kilometers));
+         print("Distance in feet: ");
+         println(metersToFeet(meters));
+         print("Distance in inches: ");
+         println(feetToInches(feet));
+         print("Distance in milimeters: ");
+         println(inchesToMillimeters(inches));
+        }
+        function milesToKilometers(miles){
+             var kilometers = miles * 1.60934;
+             return kilometers;
+        }
+        function kilometersToMeters(kilometers){
+             var meters = kilometers * 1000;
+             return meters;
+        }
+        function metersToFeet(meters){
+             var feet = meters * 3.28084;
+             return feet;
+         }
+        function feetToInches(feet){
+             var inches = feet * 12;
+             return inches;
+         }
+        function inchesToMillimeters(inches){
+             var millimeters = inches * 25.4;
+             return millimeters;
+         }
 </script>
       <canvas id="Drawing"></canvas> <!-- Graphics output canvas -->
       <textarea id="Console"></textarea> <!-- Text output console -->
